@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helsee — Your Apple Health Data, as Files You Own</title>
+    <meta name="description" content="Helsee exports Apple Health data — nutrition, cycle tracking, sleep, heart and more — as CSV and JSON files with a README any AI agent can read, and keeps a journal to show what goes together.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.6; color: #2b3433;
+            background: linear-gradient(180deg, #11807d 0%, #0a5b5d 100%);
+            min-height: 100vh;
+        }
+        .hero { text-align: center; padding: 60px 20px 40px; color: #ffffff; }
+        .hero.small { padding: 40px 20px 24px; }
+        .app-icon { width: 120px; height: 120px; border-radius: 27px; margin: 0 auto 30px; display: block;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.35); }
+        .hero.small .app-icon { width: 72px; height: 72px; border-radius: 16px; margin-bottom: 16px; }
+        h1 { font-size: 2.5em; margin-bottom: 15px; font-weight: 700; }
+        .tagline { font-size: 1.2em; opacity: 0.9; margin-bottom: 10px; }
+        .container { max-width: 900px; margin: 0 auto; padding: 0 20px 60px; }
+        .shots { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; padding: 10px 0 30px; }
+        .shots img { width: 100%; height: auto; border-radius: 18px; display: block; box-shadow: 0 8px 30px rgba(0,0,0,0.35); }
+        .card { background: white; border-radius: 16px; padding: 40px; margin-bottom: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+        .card h2 { text-align: center; margin-bottom: 24px; color: #12201f; }
+        .card h3 { color: #12201f; margin: 28px 0 10px; font-size: 1.1em; }
+        .card p { margin-bottom: 14px; }
+        .card ul { margin: 0 0 14px 22px; }
+        .card li { margin-bottom: 8px; }
+        .card code { background: #eef4f3; padding: 1px 5px; border-radius: 4px; font-size: 0.92em; }
+        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; }
+        .feature { text-align: center; }
+        .feature-icon { font-size: 40px; margin-bottom: 15px; }
+        .feature h3 { font-size: 1.1em; margin: 0 0 8px; }
+        .feature p { font-size: 0.95em; color: #5c6b6a; }
+        .privacy-note { text-align: center; color: #12201f; background: #ffd9cc; border-radius: 12px; padding: 18px 24px; font-weight: 500; }
+        .links { text-align: center; padding: 20px; }
+        .links a { color: rgba(255,255,255,0.88); text-decoration: none; margin: 0 15px; font-size: 0.95em; }
+        .links a:hover { color: #fff; text-decoration: underline; }
+        .meta { color: #6b7877; font-size: 0.9em; text-align: center; }
+        a { color: #0b6e6c; }
+        @media (max-width: 600px) { .card { padding: 26px 20px; } h1 { font-size: 2em; } .links a { display: inline-block; margin: 6px 10px; } }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <img src="icon.png" alt="Helsee app icon" class="app-icon">
+        <h1>Helsee</h1>
+        <p class="tagline">Your Apple Health data, as files you own.</p>
+        <p class="tagline">For you, a spreadsheet, or an AI agent you trust.</p>
+    </div>
+    <div class="container">
+        <div class="shots">
+            <img src="shots/01-export.jpg" alt="Choosing what to export: nutrition, cycle tracking, mind, sleep, heart, body and activity">
+            <img src="shots/02-insights.jpg" alt="Insights: mood was lower on the days after dairy">
+            <img src="shots/03-charts.jpg" alt="Charts of every daily series">
+            <img src="shots/04-journal.jpg" alt="The journal: mood, energy, symptoms, foods and events">
+        </div>
+
+        <div class="card">
+            <h2>Your health data, in the open</h2>
+            <p>Apple Health knows what you ate, how you slept and how your cycle went. Helsee takes
+               that out into plain files you can keep, open in a spreadsheet, or hand to an AI
+               assistant to analyse as time series.</p>
+            <p>Every export carries a <code>README.md</code> that explains each file and column,
+               and a <code>manifest.json</code> with the same facts for machines. <code>daily.csv</code>
+               has one row per day and one column per measure — <code>energy_kcal</code>,
+               <code>protein_g</code>, <code>sleep_h</code> — so an agent can start working without
+               guessing units.</p>
+            <p>Add a journal of what Health can’t measure — how you feel, symptoms, foods and events —
+               and Helsee shows what tended to come before a better or a worse day.</p>
+        </div>
+
+        <div class="card">
+            <h2>Features</h2>
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">🥗</div>
+                    <h3>Nutrition First</h3>
+                    <p>Calories, protein, fat, carbs, fibre, vitamins, water, caffeine — and your meals with their times.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🌸</div>
+                    <h3>Cycle Tracking</h3>
+                    <p>Period, spotting, ovulation tests, basal temperature and thirteen symptoms.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">📁</div>
+                    <h3>Your Destination</h3>
+                    <p>Save to Files, iCloud Drive or Google Drive, share a ZIP, or keep a folder in sync.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">📈</div>
+                    <h3>Charts</h3>
+                    <p>Every series day by day, with averages, lows and highs.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">📓</div>
+                    <h3>Journal &amp; Insights</h3>
+                    <p>Mood, energy, symptoms, foods and events, compared with your Health data.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🍑</div>
+                    <h3>Meet Helsi</h3>
+                    <p>A friendly porter for your data. Try it with sample data before yours builds up.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>What’s in an export</h2>
+            <ul>
+                <li><code>README.md</code> — every file and column explained, for people and AI agents</li>
+                <li><code>manifest.json</code> — time zone, period, metrics, units and counts</li>
+                <li><code>daily.csv</code> — one row per day, Health and journal side by side</li>
+                <li><code>samples/&lt;category&gt;.csv</code> — every sample, with its source app or device (JSON Lines too, if you like)</li>
+                <li><code>meals.csv</code> — nutrition grouped into the meals you logged</li>
+                <li><code>journal.csv</code> — your journal entries</li>
+            </ul>
+            <p class="meta">An empty cell means nothing was recorded that day — never a zero.</p>
+        </div>
+
+        <div class="privacy-note">
+            Helsee reads Health only to make the files and insights you ask for. Your journal stays on your device, and exports go where you send them.
+        </div>
+        <p class="meta" style="color:rgba(255,255,255,0.8);margin-top:18px">Helsee is not a medical device and does not give medical advice. Insights show correlations in your own records.</p>
+    </div>
+    <div class="links">
+        <a href="index.html">Helsee</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="support.html">Support</a>
+        <a href="mailto:kozlovskyaid@icloud.com">kozlovskyaid@icloud.com</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support — Helsee</title>
+    <meta name="description" content="Help with Helsee: connecting Apple Health, exporting, the sync folder, the journal and insights.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.6; color: #2b3433;
+            background: linear-gradient(180deg, #11807d 0%, #0a5b5d 100%);
+            min-height: 100vh;
+        }
+        .hero { text-align: center; padding: 60px 20px 40px; color: #ffffff; }
+        .hero.small { padding: 40px 20px 24px; }
+        .app-icon { width: 120px; height: 120px; border-radius: 27px; margin: 0 auto 30px; display: block;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.35); }
+        .hero.small .app-icon { width: 72px; height: 72px; border-radius: 16px; margin-bottom: 16px; }
+        h1 { font-size: 2.5em; margin-bottom: 15px; font-weight: 700; }
+        .tagline { font-size: 1.2em; opacity: 0.9; margin-bottom: 10px; }
+        .container { max-width: 900px; margin: 0 auto; padding: 0 20px 60px; }
+        .shots { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; padding: 10px 0 30px; }
+        .shots img { width: 100%; height: auto; border-radius: 18px; display: block; box-shadow: 0 8px 30px rgba(0,0,0,0.35); }
+        .card { background: white; border-radius: 16px; padding: 40px; margin-bottom: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+        .card h2 { text-align: center; margin-bottom: 24px; color: #12201f; }
+        .card h3 { color: #12201f; margin: 28px 0 10px; font-size: 1.1em; }
+        .card p { margin-bottom: 14px; }
+        .card ul { margin: 0 0 14px 22px; }
+        .card li { margin-bottom: 8px; }
+        .card code { background: #eef4f3; padding: 1px 5px; border-radius: 4px; font-size: 0.92em; }
+        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; }
+        .feature { text-align: center; }
+        .feature-icon { font-size: 40px; margin-bottom: 15px; }
+        .feature h3 { font-size: 1.1em; margin: 0 0 8px; }
+        .feature p { font-size: 0.95em; color: #5c6b6a; }
+        .privacy-note { text-align: center; color: #12201f; background: #ffd9cc; border-radius: 12px; padding: 18px 24px; font-weight: 500; }
+        .links { text-align: center; padding: 20px; }
+        .links a { color: rgba(255,255,255,0.88); text-decoration: none; margin: 0 15px; font-size: 0.95em; }
+        .links a:hover { color: #fff; text-decoration: underline; }
+        .meta { color: #6b7877; font-size: 0.9em; text-align: center; }
+        a { color: #0b6e6c; }
+        @media (max-width: 600px) { .card { padding: 26px 20px; } h1 { font-size: 2em; } .links a { display: inline-block; margin: 6px 10px; } }
+    </style>
+</head>
+<body>
+    <div class="hero small">
+        <a href="index.html"><img src="icon.png" alt="Helsee app icon" class="app-icon"></a>
+        <h1>Helsee Support</h1>
+    </div>
+    <div class="container">
+        <div class="card">
+            <h2>Questions and answers</h2>
+            <h3>An export came out empty. Why?</h3>
+            <p>Apple Health does not tell apps whether you declined a type — a declined type and an empty
+               one look the same. Open <strong>Settings › Health › Data Access &amp; Devices › Helsee</strong>
+               and check that the types you want are switched on. Also check the period: the default is the
+               last 30 days.</p>
+            <h3>How do I get my data into Google Drive or iCloud Drive?</h3>
+            <p>Tap <strong>Save to Files…</strong> and pick a folder in iCloud Drive or Google Drive (the
+               Google Drive app must be installed for it to appear in Files). Or set up a
+               <strong>Sync Folder</strong>: Helsee keeps a <code>Helsee</code> folder inside the one you pick
+               up to date, and leaves everything else in it alone.</p>
+            <h3>How often does the sync folder update?</h3>
+            <p>When Health changes, iOS lets Helsee refresh the folder in the background, roughly once an hour.
+               Health can’t be read while the device is locked, so some refreshes wait until you unlock it.
+               Opening Helsee also catches up.</p>
+            <h3>How do I give the data to an AI assistant?</h3>
+            <p>Share the ZIP to the assistant’s app, or upload the folder. Ask it to read
+               <code>README.md</code> first — it describes every file and column. Choose an assistant whose
+               privacy terms you are comfortable with: these files are your health information.</p>
+            <h3>What does Insights actually compute?</h3>
+            <p>Correlations between what you ate and did and how you felt, the same day and one or two days
+               later, plus weekly averages of nutrients. Each result shows its correlation and how many days it
+               rests on. It is arithmetic on your own records, done on your device — not a diagnosis.</p>
+            <h3>What is Sample Data?</h3>
+            <p><strong>Settings › Show Sample Data</strong> fills Charts, Insights and exports with 120 days of
+               a made-up person, so you can see what Helsee does before your own data builds up. Your Health
+               data and journal are not changed, sync pauses meanwhile, and a sample export says SAMPLE DATA at
+               the top of its README.</p>
+            <h3>How do I delete my journal?</h3>
+            <p><strong>Settings › Erase Journal</strong> removes it from the device. Deleting the app removes it too.</p>
+            <h3>Something else</h3>
+            <p>Write to <a href="mailto:kozlovskyaid@icloud.com">kozlovskyaid@icloud.com</a> with your iOS version
+               and what you tried. Please don’t attach exports — they contain your health data.</p>
+        </div>
+    </div>
+    <div class="links">
+        <a href="index.html">Helsee</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="support.html">Support</a>
+        <a href="mailto:kozlovskyaid@icloud.com">kozlovskyaid@icloud.com</a>
+    </div>
+</body>
+</html>
